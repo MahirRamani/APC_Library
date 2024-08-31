@@ -8,9 +8,7 @@ body {
   overflow: hidden;
   /* Hide overflow */
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,
-      #48E0A7,
-      #E0B348);
+  background: linear-gradient(135deg, #48e0a7, #e0b348);
   /* Gradient background maintained on body */
 }
 
@@ -28,12 +26,23 @@ body {
   max-width: 600px;
   padding: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  background: #BE48E0;
+  background: #be48e0;
   border-radius: 10px;
 }
 
 .scanner-container {
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  /* Tablet and smaller devices */
+}
+
+@media (max-width: 480px) {
+  /* Mobile devices */
+  #library-logo {
+    height: 80px;
+  }
 }
 
 .title {
@@ -50,7 +59,6 @@ video {
   color: #fff;
   background: linear-gradient(135deg, #120e0f, #372331);
   padding: 10px;
-  margin-top: 10px;
   border-radius: 8px;
   text-align: center;
 }
@@ -66,8 +74,6 @@ button {
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  background: linear-gradient(135deg,
-      #0b2347,
-      #4b2f43);
+  background: linear-gradient(135deg, #0b2347, #4b2f43);
   font-weight: bolder;
 }
