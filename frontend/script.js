@@ -17,8 +17,12 @@ function initializer() {
   codeReader
     .listVideoInputDevices()
     .then((videoInputDevices) => {
-      if (videoInputDevices.length > 0) {
+      if (videoInputDevices.length == 1) {
         selectedDeviceId = videoInputDevices[0].deviceId;
+        startScanning(selectedDeviceId);
+      }
+      else if (videoInputDevices.length > 1) {
+        selectedDeviceId = videoInputDevices[1].deviceId;
         startScanning(selectedDeviceId);
       } else {
         console.error("No Video Input devices found !!");

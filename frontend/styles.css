@@ -41,9 +41,7 @@ body {
 @media (max-width: 480px) {
 
   /* Mobile devices */
-  #library-logo {
-    height: 80px;
-  }
+  
 }
 
 .title {
