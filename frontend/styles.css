@@ -5,7 +5,7 @@ body {
   /* Reset default margin */
   padding: 0;
   /* Reset default padding */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Hide overflow */
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #48e0a7, #e0b348);
@@ -39,6 +39,7 @@ body {
 }
 
 @media (max-width: 480px) {
+
   /* Mobile devices */
   #library-logo {
     height: 80px;
