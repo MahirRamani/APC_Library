@@ -133,6 +133,7 @@ function sendBarcodeData(barcode) {
             <div style="display: flex; justify-content: space-between; align-items: center;" }>
             <button id="returnBookButton" onclick="returnBook('${barcode}')">Return Book</button>
             <button id="renewBookButton" onclick="renewBook('${barcode}')">Renew Book</button>
+            <div id="loadingSymbol" style="display: none;">Loading...</div>
             </div>
           `;
 
