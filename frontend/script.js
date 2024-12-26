@@ -71,7 +71,6 @@ libraryLogo.addEventListener("click", () => {
 });
 
 function sendBarcodeData(barcode) {
-  console.log('000000000000000000000000000000000000000');
   console.log(barcode);
 
   fetch(`http://localhost:3000/api/data/barcode`, {
@@ -125,7 +124,7 @@ function sendBarcodeData(barcode) {
           resultCard.innerHTML = `
             <p><b>Book Name</b> : ${data.bookName}</p>
             <p><b>Issued By</b> : ${
-            // bakiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+            
             data.stdName ? data.stdName : "Unknown"
             } (Roll No - ${data.rollNo ? data.rollNo : "N/A"})</p>
             <p><b>Issue Date</b> : ${issueDate.toLocaleDateString()}</p>
