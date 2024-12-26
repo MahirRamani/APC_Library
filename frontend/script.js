@@ -39,10 +39,7 @@ function startScanning(deviceId) {
   codeReader
     .decodeFromVideoDevice(deviceId, "scanner", (result, err) => {
       if (result) {
-        // const startScanButton = document.getElementById("startScanButton");
-
-        // Change button text to "Scanning..." and disable the button
-        // startScanButton.textContent = "Scanning  ...";
+        
         console.log(result.text);
         startScanButton.style.display = "none";
         barcodeResultElement.textContent = "Barcode Detected : " + result.text; // Display a success message
@@ -87,23 +84,16 @@ function sendBarcodeData(barcode) {
       stopScanning();
       console.log("data from appscript");
       console.log(data);
-      // console.log(data.students);
-      // const book = data.books.find((t) => t.ID == barcode);
+      
       const resultCard = document.getElementById("result-card");
       resultCard.innerHTML = "";
-      // console.log(book);
-      // console.log(book.Name);
+      
 
       if (data.MSG != "Invalid Barcode !!" || data.findBookStatus == "Valid Barcode") {
-        // transaction = data.transactions.find((t) => t.ID == barcode);
-        // console.log(transaction);
 
         if (data.findBookTxnStatus == null || (data.findBookTxnStatus == "Transaction Found" && ((data.issueDate == null && data.dueDate == null)||(data.issueDate == "" && data.dueDate == "")))) {
           const currentDate = new Date();
           const dueDate = currentDate + 15;
-          // console.log(dueDate);
-          // console.log(currentDate);
-          // console.log(currentDate > dueDate);
 
 
           // If the current date is after the due date, allow reissue
@@ -200,16 +190,16 @@ function issueBook(barcode, bookName) {
       window.location.reload(true); // true is optional and for forcing hard reload in some browsers
 
       // Hide the loader and enable the button
-      // loader.style.display = "none";
-      // issueBookButton.disabled = false;
+      loader.style.display = "none";
+      issueBookButton.disabled = false;
 
       // Navigate to the div with the class "container"
-      // const containerDiv = document.querySelector(".container");
-      // // containerDiv.scrollIntoView({ behavior: 'smooth' });
-      // if (containerDiv) {
-      //   containerDiv.style.display = 'block'; // Show the div
-      //   containerDiv.scrollIntoView({ behavior: "smooth" });
-      // }
+      const containerDiv = document.querySelector(".container");
+      // containerDiv.scrollIntoView({ behavior: 'smooth' });
+      if (containerDiv) {
+        containerDiv.style.display = 'block'; // Show the div
+        containerDiv.scrollIntoView({ behavior: "smooth" });
+      }
     })
     .catch((error) => {
       console.error("Error issuing book:", error);
