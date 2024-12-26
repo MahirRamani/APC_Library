@@ -47,54 +47,6 @@ app.post("/api/data/barcode", async (req, res) => {
 );
 
 
-// app.post("/api/data/operation", async (req, res) => {
-//   // console.log("hi");
-
-//   try {
-//     console.log("entered");
-//     console.log(req.body)
-//     // console.log(req.body);
-//     // console.log(req.body.barcode);
-
-//     const response = await fetch(
-//       `${process.env.API_URL}`,
-//       {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(req.body),
-//         mode: "no-cors",
-//       }
-//     );
-
-//     if (!response.ok) {
-//       throw new Error(`Error fetching data: ${response.statusText}`);
-//     }
-
-//     const data = await response.json();
-
-//     // fetch(`${process.env.API_URL}`,
-//     //   {
-//     //     headers: {
-//     //       "Content-Type": "application/json"
-//     //     },
-//     //     body: JSON.stringify(req.body),
-//     //     mode: "no-cors",
-//     //   }
-//     // ).then
-//     // console.log("-----------------------------------------------------------------------------");
-//     // // console.log(response.parameter.barcode);
-//     // // console.log(response);
-//     res.json(data);
-//     // console.log(process.env.API_URL);
-//     // console.log("==========");
-//     // return response;
-//   } catch (error) {
-//     res.status(500).send("Error retrieving data");
-//   }
-// });
-
 
 app.post("/api/data/operation", async (req, res) => {
   try {
